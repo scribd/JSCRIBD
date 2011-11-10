@@ -5,9 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.scribd.Scribd;
-import com.scribd.resource.ScribdDocument;
-import com.scribd.resource.ScribdUser;
+import com.scribd.jscribd.Scribd;
+import com.scribd.jscribd.resource.ScribdDocument;
+import com.scribd.jscribd.resource.ScribdUser;
 
 
 public class SimpleTest {

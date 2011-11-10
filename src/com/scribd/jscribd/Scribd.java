@@ -1,4 +1,4 @@
-package com.scribd;
+package com.scribd.jscribd;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,7 +8,7 @@ import java.util.Map;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
-import com.scribd.resource.ScribdDocument;
+import com.scribd.jscribd.resource.ScribdDocument;
 
 /**
  *

@@ -1,4 +1,4 @@
-package com.scribd.resource;
+package com.scribd.jscribd.resource;
 
 import static junit.framework.Assert.*;
 
@@ -18,9 +18,9 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
-import com.scribd.MockApi;
-import com.scribd.Scribd;
-import com.scribd.resource.ScribdDocument;
+import com.scribd.jscribd.MockApi;
+import com.scribd.jscribd.Scribd;
+import com.scribd.jscribd.resource.ScribdDocument;
 
 public class ScribdDocumentTest {
 	private static DocumentBuilder dBuilder = null;
