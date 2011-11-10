@@ -1,4 +1,4 @@
-package com.scribd.resource;
+package com.scribd.jscribd.resource;
 
 import java.io.File;
 import java.util.HashMap;
@@ -8,7 +8,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.scribd.Api;
+import com.scribd.jscribd.Api;
 
 public class ScribdDocument extends ScribdResource {
 	

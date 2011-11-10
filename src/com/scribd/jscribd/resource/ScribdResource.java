@@ -1,4 +1,4 @@
-package com.scribd.resource;
+package com.scribd.jscribd.resource;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,7 +7,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import com.scribd.Api;
+import com.scribd.jscribd.Api;
 
 /**
  * The base class for other Scribd API resources.

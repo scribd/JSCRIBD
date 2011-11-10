@@ -1,11 +1,11 @@
-package com.scribd;
+package com.scribd.jscribd;
 
 import java.io.File;
 import java.util.Map;
 
 import org.w3c.dom.Document;
 
-import com.scribd.resource.ScribdUser;
+import com.scribd.jscribd.resource.ScribdUser;
 
 public class MockApi implements Api {
 

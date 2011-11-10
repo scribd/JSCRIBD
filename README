@@ -41,7 +41,7 @@ To build the artifact and install it in your local repository, run:
 Then add it as a dependency:
 
 <dependency>
-  <groupId>com.scribd</groupId>
+  <groupId>com.scribd.jscribd</groupId>
   <artifactId>jscribd</artifactId>
   <version>1.0</version>
 </dependency>

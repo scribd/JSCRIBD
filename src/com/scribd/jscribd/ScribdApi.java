@@ -1,4 +1,4 @@
-package com.scribd;
+package com.scribd.jscribd;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
@@ -35,7 +35,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import com.scribd.resource.ScribdUser;
+import com.scribd.jscribd.resource.ScribdUser;
 
 /**
  *

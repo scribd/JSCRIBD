@@ -1,4 +1,4 @@
-package com.scribd.resource;
+package com.scribd.jscribd.resource;
 
 import static junit.framework.Assert.*;
 
@@ -16,8 +16,8 @@ import org.junit.Test;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
-import com.scribd.MockApi;
-import com.scribd.Scribd;
+import com.scribd.jscribd.MockApi;
+import com.scribd.jscribd.Scribd;
 
 public class ScribdCollectionTest {
 	private static DocumentBuilder dBuilder = null;
