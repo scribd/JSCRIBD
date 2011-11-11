@@ -18,6 +18,7 @@ public class Scribd {
 	
 	private static final int DEFAULT_SEARCH_LIMIT = 10;
 	private static final int DEFAULT_SEARCH_OFFSET = 1;
+	private static final String DEFAULT_FEATURED_SCOPE = "hot";
 
 	private final Api api;
 	
@@ -72,4 +73,40 @@ public class Scribd {
 		
 		return list;
 	}
+
+    /**
+     * For more information, see the Scribd API documentation:
+     * http://www.scribd.com/developers/api?method_name=docs.featured
+     *
+     * @return A list of documents matching the search parameters.
+     */
+    public List<ScribdDocument> getFeaturedDocuments() {
+        return getFeaturedDocuments(DEFAULT_FEATURED_SCOPE, DEFAULT_SEARCH_LIMIT, DEFAULT_SEARCH_OFFSET);
+    }
+
+    /**
+     * For more information, see the Scribd API documentation:
+     * http://www.scribd.com/developers/api?method_name=docs.featured
+     *
+     * @param scope The search scope.
+     * @param limit The maximum number of results to return.
+     * @param offset The search result offset.
+     * @return A list of documents matching the search parameters.
+     */
+    public List<ScribdDocument> getFeaturedDocuments(String scope, int limit, int offset) {
+        Map<String, Object> fields = new HashMap<String, Object>();
+        fields.put("scope", scope);
+        fields.put("limit", limit);
+        fields.put("offset", offset);
+
+        Document xml = api.sendRequest("docs.featured", fields);
+
+        List<ScribdDocument> list = new ArrayList<ScribdDocument>();
+        NodeList results = xml.getElementsByTagName("result");
+        for (int i = 0; i < results.getLength(); i++) {
+            list.add(new ScribdDocument(api, results.item(i)));
+        }
+
+        return list;
+    }
 }
