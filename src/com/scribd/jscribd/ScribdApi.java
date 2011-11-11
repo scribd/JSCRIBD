@@ -23,12 +23,10 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.cookie.params.CookieSpecPNames;
 import org.apache.http.entity.mime.MultipartEntity;
 import org.apache.http.entity.mime.content.FileBody;
 import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.BasicHttpParams;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -147,10 +145,7 @@ public class ScribdApi implements Api {
 
 		fields.put("api_sig", sign(fields));
 
-		BasicHttpParams params = new BasicHttpParams();
-		params.setParameter(CookieSpecPNames.DATE_PATTERNS, Arrays.asList("EEE, dd MMM yyyy HH:mm:ss z"));
-
-		HttpClient client = new DefaultHttpClient(params);
+		HttpClient client = new DefaultHttpClient();
 		InputStream instream = null;
 		try {
 			HttpEntity entity = post(fields, file, client);
