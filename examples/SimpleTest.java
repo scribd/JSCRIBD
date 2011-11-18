@@ -59,5 +59,8 @@ public class SimpleTest {
         for (ScribdDocument doc : featuredList) {
             System.out.println(doc);
         }
+
+        System.out.println("===== Get Document =====");
+        System.out.println(scribd.getDocument(73038675));
     }
 }

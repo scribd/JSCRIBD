@@ -109,4 +109,25 @@ public class Scribd {
 
         return list;
     }
+
+    /**
+     * For more information, see the Scribd API documentation:
+     * http://www.scribd.com/developers/api?method_name=docs.getSettings
+     *
+     * @param doc_id The ID for the document.
+     * @return The ScribdDocument corresponding to the ID.
+     */
+    public ScribdDocument getDocument(int doc_id) {
+        Map<String, Object> fields = new HashMap<String, Object>();
+        fields.put("doc_id", doc_id);
+
+        Document xml = api.sendRequest("docs.getSettings", fields);
+        NodeList results = xml.getElementsByTagName("rsp");
+
+        if (results.getLength() < 1) {
+            return null;
+        }
+
+        return new ScribdDocument(api, results.item(0));
+    }
 }
