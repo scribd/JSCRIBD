@@ -17,7 +17,7 @@ import com.scribd.jscribd.resource.ScribdDocument;
 public class Scribd {
 	
 	private static final int DEFAULT_SEARCH_LIMIT = 10;
-	private static final int DEFAULT_SEARCH_OFFSET = 1;
+	private static final int DEFAULT_SEARCH_OFFSET = 0;
 	private static final String DEFAULT_FEATURED_SCOPE = "hot";
 
 	private final Api api;
