@@ -5,7 +5,7 @@
 == DESCRIPTION:
 
 jscribd is a Java library for interacting with the Scribd API. For more information on
-the Scribd platform, visit http://www.scribd.com/developers/api
+the Scribd platform, visit https://www.scribd.com/developers/platform
 
 == FEATURES:
 
@@ -52,7 +52,7 @@ case this documentation gets out of date. If in doubt, check in dist/mvn/ .
 == GETTING STARTED:
 
 First, you'll need to get a Scribd API account. Visit
-http://www.scribd.com/developers/api to apply for a platform account.
+https://www.scribd.com/developers/platform to apply for a platform account.
 
 On the Platform site you will be given an API key and secret, which the API object
 will need to authenticate you. 
